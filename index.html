@@ -5,11 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="styles/style-home.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="recursos/font-awesome/css/all.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Open+Sans:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
     <title>Portafolio</title>
 </head>
 
 <body>
+    <div class="hero">
+        <nav>
+            <!-- <img src="img/trueno.svg" alt="logo.png" class="logo" id="logo"> -->
+            <!-- <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contactame">Contactame</a></li>
+            </ul> -->
+            <div class="toggle"></div>
+            <img src="img/moon.png" alt="moon/sun" id="icon">
+            <!-- <a href="" class="btn">Hire me</a> -->
+        </nav>
 
+        <!-- <header>
+            <div class="toggle"></div>
+            <a href="" class="btn">Hire me</a>
+        </header> -->
+        <div class="info">
+            <h1>Mi <span> Página </span> Personal</h1>
+            <p class="info-corta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex veniam esse, quae et <br> accusamus recusandae quia quo optio facilis, tenetur excepturi placeat ipsa quidem <br> nostrum veritatis ipsam vitae deserunt!</p>
+            <a href="">Descargar cv</a>
+        </div>
+
+        <div class="img-box">
+            <img src="img/blob1.svg" alt="blob1.svg" class="back-img" id="blob">
+            <img src="img/coffee.png" alt="coffee.png" class="main-img">
+        </div>
+
+        <div class="social-links">
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+
+    <script>
+        var icon = document.getElementById("icon");
+        var blob = document.getElementById("blob");
+        // var logo = document.getElementById("logo");
+        icon.onclick = function() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                blob.src = "img/blob2.svg";
+                icon.src = "img/sun.png";
+                // logo.src = "img/trueno2.svg";
+            } else {
+                blob.src = "img/blob1.svg";
+                icon.src = "img/moon.png";
+                // logo.src = "img/trueno.svg";
+            }
+        }
+    </script>
 </body>
 
 </html>
