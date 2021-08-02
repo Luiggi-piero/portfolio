@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Estilos css -->
     <link rel="stylesheet" href="styles/style-home.css">
+    <link rel="stylesheet" href="styles/style-navigation.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="recursos/font-awesome/css/all.min.css">
     <!-- Google fonts -->
@@ -18,7 +19,34 @@
 </head>
 
 <body>
-    <div class="hero">
+
+    <!-- Area de navegacion -->
+    <div class="navigation">
+        <div class="banner">
+            <!-- <img src="img/banner.jpg" alt="banner.jpg" class="cover"> -->
+            <video class="cover" autoplay>
+                <source src="video/darina-belonogova.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="navLink">
+            <div class="mode">
+                <img src="img/moon.png" alt="moon/sun" id="icon">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Fin del area de navegacion -->
+
+    <!-- Home -->
+    <div class="home">
         <nav>
             <!-- <img src="img/trueno.svg" alt="logo.png" class="logo" id="logo"> -->
             <!-- <ul>
@@ -29,16 +57,10 @@
                 <li><a href="#contactame">Contactame</a></li>
             </ul> -->
             <div class="toggle"></div>
-            <img src="img/moon.png" alt="moon/sun" id="icon">
-            <!-- <a href="" class="btn">Hire me</a> -->
         </nav>
 
-        <!-- <header>
-            <div class="toggle"></div>
-            <a href="" class="btn">Hire me</a>
-        </header> -->
         <div class="info">
-            <h1>Mi <span> Página </span> Personal</h1>
+            <h1><span> Luiggi </span> Yantas</h1>
             <p class="info-corta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex veniam esse, quae et <br> accusamus recusandae quia quo optio facilis, tenetur excepturi placeat ipsa quidem <br> nostrum veritatis ipsam vitae deserunt!</p>
             <a href="">Descargar cv</a>
         </div>
@@ -55,11 +77,22 @@
             <a href=""><i class="fab fa-github"></i></a>
         </div>
     </div>
+    <!-- Fin home -->
 
+    <!-- Contactame -->
+    <div class="contact-me">
+
+    </div>
+    <!-- Fin contactame -->
 
     <script>
         var icon = document.getElementById("icon");
         var blob = document.getElementById("blob");
+
+        var menu = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        var home = document.querySelector('.home');
+        var video = document.querySelector('.cover');
         // var logo = document.getElementById("logo");
         icon.onclick = function() {
             document.body.classList.toggle("dark-mode");
@@ -72,6 +105,18 @@
                 icon.src = "img/moon.png";
                 // logo.src = "img/trueno.svg";
             }
+        }
+
+        menu.onclick = function() {
+            // Reiniciar video. 
+            if (!navigation.classList.contains('active')) {
+                video.pause();
+                video.currentTime = 0;
+                video.load();
+            }
+            menu.classList.toggle('active');
+            navigation.classList.toggle('active');
+            home.classList.toggle('active');
         }
     </script>
 </body>

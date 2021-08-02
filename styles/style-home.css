@@ -1,6 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 :root {
@@ -14,14 +21,15 @@
 
 .dark-mode {
     /* Fondo */
-    --primary-color: #222831;
+    --primary-color: #333;
     /* texto principal */
     --secondary-color: #EEEEEE;
     /* texto secundario */
     --tertiary-color: #FF0066;
 }
 
-.hero {
+.home,
+.contact-me {
     /* height: 100vh; */
     position: relative;
     left: 0;
@@ -37,7 +45,7 @@
     transition: 1s;
 }
 
-.hero .active {
+.home.active {
     left: 100%;
 }
 
@@ -99,13 +107,16 @@ nav {
 
 .toggle.active::before {
     transform: translateY(0px) rotate(45deg);
-    background: #fff;
+    background: #777;
 }
 
 .toggle.active::after {
     transform: translateY(0px) rotate(-45deg);
-    background: #fff;
+    background: #777;
 }
+
+
+/* Fin boton menu */
 
 
 /* .logo {
@@ -144,6 +155,7 @@ nav ul li a:hover {
 
 span {
     color: var(--tertiary-color);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .info p {
@@ -180,7 +192,7 @@ span {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
     transition: bottom 1s, left 1s;
 }
 
@@ -214,11 +226,6 @@ span {
     color: var(--tertiary-color);
 }
 
-#icon {
-    width: 30px;
-    cursor: pointer;
-}
-
 
 /* nav ul {
     flex: 1;
@@ -226,7 +233,7 @@ span {
 } */
 
 @media (max-width: 441.2px) {
-    .hero {
+    .home {
         height: 100%;
     }
 }
