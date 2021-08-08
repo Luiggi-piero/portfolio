@@ -8,12 +8,13 @@
     <!-- Estilos css -->
     <link rel="stylesheet" href="styles/style-home.css">
     <link rel="stylesheet" href="styles/style-navigation.css">
+    <link rel="stylesheet" href="styles/style-contact.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="recursos/font-awesome/css/all.min.css">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Open+Sans:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Open+Sans&family=Roboto:wght@500&family=Poppins&display=swap" rel="stylesheet">
 
     <title>Portafolio</title>
 </head>
@@ -33,11 +34,11 @@
                 <img src="img/moon.png" alt="moon/sun" id="icon">
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portafolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="menu-home">Home</a></li>
+                <li><a href="#" class="menu-">About</a></li>
+                <li><a href="#" class="menu-">Services</a></li>
+                <li><a href="#" class="menu-">Portafolio</a></li>
+                <li><a href="#" class="menu-contact">Contact</a></li>
             </ul>
 
         </div>
@@ -48,14 +49,6 @@
     <!-- Home -->
     <div class="home">
         <nav>
-            <!-- <img src="img/trueno.svg" alt="logo.png" class="logo" id="logo"> -->
-            <!-- <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contactame">Contactame</a></li>
-            </ul> -->
             <div class="toggle"></div>
         </nav>
 
@@ -80,43 +73,125 @@
     <!-- Fin home -->
 
     <!-- Contactame -->
-    <div class="contact-me">
-
+    <div class="contact">
+        <div class="imgBx">
+            <img src="img/rolf-login.jpg" alt="rolf-login.jgp">
+        </div>
+        <div class="contentBx">
+            <div class="back">
+                <a class="back-from-contact"><i class="fas fa-angle-left fa-2x"></i></a>
+            </div>
+            <div class="formBx">
+                <div class="title">
+                    <h2>Contáctame</h2>
+                    <!-- <hr color="#e91e63" size="9"> -->
+                </div>
+                <form action="">
+                    <div class="inputBx">
+                        <span>Nombre</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Correo</span>
+                        <input type="email">
+                    </div>
+                    <div class="inputBx">
+                        <span>Mensaje</span>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="inputBx">
+                        <span>Archivo</span>
+                        <input type="file">
+                    </div>
+                    <div class="inputBx send">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <!-- <div class="inputBx">
+                        <p>Don't have an account?<a href=""> Sign up</a> </p>
+                    </div> -->
+                    <!-- <img src="img/tema portafolio.PNG" alt=""> -->
+                </form>
+                <h3>Visita mis redes sociales</h3>
+                <div class="redes">
+                    <a href=""><i class="fab fa-facebook fa-2x facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Fin contactame -->
 
     <script>
         var icon = document.getElementById("icon");
         var blob = document.getElementById("blob");
+        var video = document.querySelector('.cover');
 
-        var menu = document.querySelector('.toggle');
+        var spans = document.querySelectorAll('.contentBx .formBx span');
+        var inputs = document.querySelectorAll('input');
+        var textArea = document.querySelector('textarea');
+
+        var btnMenu = document.querySelector('.toggle');
+
+        // Botones de retorno
+        var backFromContact = document.querySelector('.back-from-contact');
+
+        // Areas de la pagina
         var navigation = document.querySelector('.navigation');
         var home = document.querySelector('.home');
-        var video = document.querySelector('.cover');
+        var contact = document.querySelector('.contact');
+
+
+        // Botones de la barra del menu
+        var menuContact = document.querySelector('.menu-contact');
         // var logo = document.getElementById("logo");
+
+        // Accion del boton para cambiar el tema
         icon.onclick = function() {
+            // Cambiando tema.
             document.body.classList.toggle("dark-mode");
+
+            // Cambiando aspecto del formulario contact.
+            spans.forEach(span => span.classList.toggle('dark-span'));
+            inputs.forEach(input => input.classList.toggle('dark-input-textarea'));
+            textArea.classList.toggle('dark-input-textarea');
+
             if (document.body.classList.contains("dark-mode")) {
                 blob.src = "img/blob2.svg";
                 icon.src = "img/sun.png";
+
                 // logo.src = "img/trueno2.svg";
             } else {
                 blob.src = "img/blob1.svg";
                 icon.src = "img/moon.png";
+
                 // logo.src = "img/trueno.svg";
             }
         }
 
-        menu.onclick = function() {
+        //Accion al seleccionar el boton menu(toggle). 
+        btnMenu.onclick = function() {
             // Reiniciar video. 
             if (!navigation.classList.contains('active')) {
                 video.pause();
                 video.currentTime = 0;
                 video.load();
             }
-            menu.classList.toggle('active');
+            btnMenu.classList.toggle('active');
             navigation.classList.toggle('active');
             home.classList.toggle('active');
+        }
+
+        // Accion de los botones de la barra del menu.
+        menuContact.onclick = function() {
+            navigation.classList.remove('active');
+            contact.classList.add('active');
+        }
+
+        // Accion regresar.
+        backFromContact.onclick = function() {
+            contact.classList.remove('active');
+            navigation.classList.add('active');
         }
     </script>
 </body>
