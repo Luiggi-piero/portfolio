@@ -5,6 +5,7 @@ css variables
   --bg-black--900: #000000;
   --bg-black-100: #dddddd;
   --bg-black-50: #eff0f4;
+  --bg-opacity: rgba(255, 255, 255, 0.8);
 
   --text-black-900: #000000;
   --text-black-700: #555555;
@@ -25,7 +26,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
-  /* overflow-y: auto; */
+}
+
+body.stop-scrolling{
+  overflow-y: hidden;
 }
 
 *:not(i) {
@@ -204,6 +208,28 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
   }
 }
 
@@ -828,10 +854,74 @@ portfolio popup
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
+  transition: all .3s ease;
+}
+
+.portfolio-popup.open{
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-popup .popup-loader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-opacity);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.portfolio-popup .popup-loader.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-popup .popup-loader-inner {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+}
+
+.portfolio-popup .popup-loader-inner .circle {
+  --color: #333;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.portfolio-popup .popup-loader-inner .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.portfolio-popup .popup-loader-inner .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.portfolio-popup .popup-loader-inner .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.portfolio-popup .popup-loader-inner .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
 }
 
 .portfolio-popup .popup-details{
@@ -841,6 +931,11 @@ portfolio popup
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  transition: all .5s ease;
+}
+
+.portfolio-popup .popup-details.active{
+  opacity: 1;
 }
 
 .portfolio-popup .popup-details-inner{
@@ -965,11 +1060,4 @@ portfolio popup
   line-height: 40px;
   font-size:25px;
   cursor: pointer;
-}
-
-.portfolio-popup .separator{
-  height: 1px;
-  width: 100%;
-  display: block;
-  background-color: var(--bg-black-100);
 }
