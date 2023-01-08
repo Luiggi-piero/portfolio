@@ -3,8 +3,8 @@ css variables
 ==============================*/
 :root {
   --bg-black--900: #000000;
-  --bg-black-100: #dddddd;
-  --bg-black-50: #eff0f4;
+  --bg-black-100: #ffffff;
+  --bg-black-50: #f4f5f9;
   --bg-opacity: rgba(255, 255, 255, 0.8);
 
   --text-black-900: #000000;
@@ -26,6 +26,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
+  background-color: var(--bg-black-50);
 }
 
 body.stop-scrolling {
@@ -87,7 +88,7 @@ img {
   font-size: 16px;
   font-weight: 500;
   color: var(--theme-color);
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   line-height: 1.5;
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -569,7 +570,7 @@ about
 
 .about-section .about-tabs .tab-item.active {
   color: var(--theme-color);
-  background-color: #eee;
+  background-color: var(--bg-black-100);
 }
 
 .about-section .tab-content {
@@ -604,7 +605,7 @@ about
 .about-section .skills .skill-item .progress {
   position: relative;
   height: 20px;
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   border-radius: 10px;
 }
 
@@ -665,7 +666,7 @@ about
 }
 
 .about-section .timeline .timeline-item-inner {
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   padding: 30px;
   border-radius: 5px;
   position: relative;
@@ -702,7 +703,7 @@ about
   line-height: 40px;
   position: absolute;
   top: 18px;
-  background-color: var(--bg-black-50);
+  background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-100);
   border-radius: 50%;
   font-size: 16px;
@@ -779,7 +780,7 @@ portfolio
 
 .portfolio-section .filter-item.active {
   color: var(--theme-color);
-  background-color: #eee;
+  background-color: var(--bg-black-100);
 }
 
 .portfolio-section .portfolio-item {
@@ -800,7 +801,7 @@ portfolio
 }
 
 .portfolio-section .portfolio-item-inner {
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
@@ -854,7 +855,6 @@ portfolio popup
 
 .portfolio-popup {
   background-color: var(--bg-black-50);
-  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -1003,6 +1003,23 @@ portfolio popup
   font-size: 16px;
 }
 
+.portfolio-popup .info ul li.link{
+  display: inline-block;
+  
+}
+
+.portfolio-popup .info ul li.link a{
+  cursor: pointer;
+  background-color: var(--bg-black-100);
+  padding: 10px 15px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 500;
+  border-radius: 30px;
+  font-size: 16px;
+  color: var(--text-black-600);
+}
+
 .portfolio-popup .info ul li span {
   font-weight: 400;
 }
@@ -1031,7 +1048,7 @@ portfolio popup
   width: auto;
   height: auto;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .portfolio-popup .popup-details-btn {
@@ -1044,7 +1061,7 @@ portfolio popup
   font-size: 16px;
   font-weight: 500;
   color: var(--theme-color);
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   padding: 0 15px;
   cursor: pointer;
 }
@@ -1061,7 +1078,7 @@ portfolio popup
   height: 40px;
   border-radius: 50%;
   text-align: center;
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   color: var(--text-black-600);
   line-height: 40px;
   font-size: 25px;
@@ -1085,7 +1102,7 @@ contact
 }
 
 .contact-section .contact-item-inner {
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   padding: 30px 15px;
   text-align: center;
   border-radius: 10px;
@@ -1135,7 +1152,7 @@ contact
   width: 100%;
   border-radius: 30px;
   border: none;
-  background-color: #eee;
+  background-color: var(--bg-black-100);
   color: var(--text-black-700);
   font-size: 16px;
   padding: 0 18px;
