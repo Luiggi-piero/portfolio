@@ -3,23 +3,33 @@ css variables
 ==============================*/
 :root {
   --bg-black--900: #000000;
-  --bg-black-100: #ffffff;
-  --bg-black-50: #f4f5f9;
+  --bg-black-100: #ffffff; /*tarjetas*/
+  --bg-black-50: #f4f5f9; /*fondo*/
   --bg-opacity: rgba(255, 255, 255, 0.8);
 
   --text-black-900: #000000;
   --text-black-700: #555555;
   --text-black-600: #666666;
   --text-black-300: #bbbbbb;
+}
 
-  /* --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
-  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
 
-  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8; */
+/*==============================
+Sobreescritura de variables css
+==============================*/
+
+body.dark{
+  --bg-black--900: #ffffff;
+  --bg-black-100: #272727; /*tarjetas*/
+  --bg-black-50: #0F0F0F; /*fondo*/
+
+  --text-black-900: #ffffff;
+  --text-black-700: #ffffff;
+  --text-black-600: #bbbbbb;
 }
 
 /*==============================
-styles global 
+Estilos globales 
 ==============================*/
 
 body {
@@ -419,7 +429,7 @@ menu
   display: inline-block;
   font-size: 30px;
   font-weight: 600;
-  color: var(--text-black-700);
+  color: var(--text-black-600);
   padding: 5px 30px;
   text-transform: capitalize;
   position: relative;
@@ -495,7 +505,7 @@ home
 .home-section .home-text h1 {
   font-size: 20px;
   font-weight: 500;
-  color: var(--text-black-700);
+  color: var(--text-black-600);
   margin: 0;
   text-transform: capitalize;
 }

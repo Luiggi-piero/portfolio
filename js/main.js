@@ -176,7 +176,6 @@ function bodyScrollingToggle() {
 // Ocultar todas las secciones menos el home
 (() => {
   const sections = document.querySelectorAll(".section");
-  console.log(sections);
   sections.forEach((section) => {
     if (!section.classList.contains("active")) {
       section.classList.add("hide");
