@@ -183,6 +183,12 @@ img {
   background-color: #4dd0e1;
 }
 
+.glass-effect{
+  background: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

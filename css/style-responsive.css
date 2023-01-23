@@ -94,4 +94,13 @@
   .home-section .home-text h2 {
     font-size: 30px;
   }
+
+  .style-switcher{
+    top: auto;
+    bottom: 50px;
+  }
+
+  .style-switcher .style-icon{
+    right: 15px;
+  }
 }

@@ -1,6 +1,6 @@
 .style-switcher{
     position: fixed;
-    top: 80px;
+    top: 130px;
     right: 0;
     padding: 15px;
     z-index: 103;
@@ -9,7 +9,7 @@
 }
 
 .style-switcher .style-icon{
-    /* position: absolute; */
+    position: absolute;
     right: 100%;
     width: 40px;
     height: 40px;
