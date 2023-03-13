@@ -13,15 +13,14 @@ css variables
   --text-black-300: #bbbbbb;
 }
 
-
 /*==============================
 Sobreescritura de variables css
 ==============================*/
 
-body.dark{
+body.dark {
   --bg-black--900: #ffffff;
   --bg-black-100: #272727; /*tarjetas*/
-  --bg-black-50: #0F0F0F; /*fondo*/
+  --bg-black-50: #0f0f0f; /*fondo*/
 
   --text-black-900: #ffffff;
   --text-black-700: #ffffff;
@@ -105,6 +104,12 @@ img {
   border: none;
   display: inline-block;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-1:hover {
+  background-color: var(--theme-color);
+  color: var(--text-black-900);
 }
 
 .effect-wrap .effect {
@@ -183,7 +188,7 @@ img {
   background-color: #4dd0e1;
 }
 
-.glass-effect{
+.glass-effect {
   background: #fafafa10;
   backdrop-filter: blur(0.4rem);
   -webkit-backdrop-filter: blur(0.4rem);
