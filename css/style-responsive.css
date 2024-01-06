@@ -84,6 +84,11 @@
   .portfolio-popup .description{
     margin-bottom: 20px;
   }
+
+  .see-certificate.left {
+    left: auto;
+    right: 45px;
+  }
 }
 
 @media only screen and (max-width: 570px) {
