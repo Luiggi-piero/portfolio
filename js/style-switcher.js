@@ -3,11 +3,22 @@
 //  ==============================================================
 
 const dayNight = document.querySelector(".day-night");
+const skillLogos = document.querySelectorAll(".skill-logo");
+const textsOnly = document.querySelectorAll(".text-only");
 
 dayNight.addEventListener('click', () => {
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
     document.body.classList.toggle('dark');
+
+    // Modificando la clase de logos o solo textos(solo texto funciona como logo)
+    skillLogos.forEach(logo => {
+      logo.classList.toggle("dark-logo")
+    });
+
+    textsOnly.forEach(texto => {
+      texto.classList.toggle("dark-text")
+    })
 })
 
 window.addEventListener("load", () => {

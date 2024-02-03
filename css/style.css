@@ -649,17 +649,44 @@ about
 }
 
 .about-section .skills .skill-item {
-  flex: 0 0 50%;
+  flex: 0 0 10%;
   max-width: 50%;
   padding: 0 15px;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .about-section .skills .skill-item p {
   font-size: 16px;
   color: var(--text-black-600);
   text-transform: capitalize;
-  margin: 0 0 10px;
+  text-align: center;
+}
+
+.bootstrap-logo {
+  height: 90px;
+}
+
+.about-section .skills .skill-item p.text-only {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.wrap-text-only {
+  display: flex;
+  justify-content: center;
+}
+
+.about-section img.dark-logo {
+  filter: invert(1);
+}
+
+.about-section .skills .skill-item p.text-only.dark-text {
+  color: #FFF;
 }
 
 .about-section .skills .skill-item .progress {
