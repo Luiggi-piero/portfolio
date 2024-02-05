@@ -84,7 +84,10 @@
           </div>
           <div class="home-img">
             <div class="img-box">
-              <img src="img/luiggi.webp" alt="luiggi-img" />
+              <picture>
+                <source media="(min-width: 571px)" srcset="img/person-350.webp">
+                <img src="img/person-220.webp" alt="luiggi-img">
+              </picture>
             </div>
           </div>
         </div>
@@ -107,7 +110,11 @@
         <div class="row">
           <div class="about-img">
             <div class="img-box">
-              <img src="img/luiggi.webp" alt="luiggi-img" />
+              <picture>
+                <source media="(max-width: 400px)" srcset="img/person-350.webp">
+                <source media="(min-width: 766px)" srcset="img/person-350.webp">
+                <img src="img/person-500.webp" alt="luiggi-img" />
+              </picture>
             </div>
             <!-- social links start -->
             <div class="social-links">
