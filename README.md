@@ -6,4 +6,5 @@ Portafolio de proyectos web.
 
 </br>
 
-![project-13](https://user-images.githubusercontent.com/86317658/214752266-2c84107c-2cb7-4b00-975d-36c066e566d0.png)
+![image](https://github.com/Luiggi-piero/portfolio/assets/86317658/52beef6f-6852-4aed-a2ad-73a8bc1593f8)
+
